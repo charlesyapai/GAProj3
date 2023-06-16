@@ -1,0 +1,22 @@
+Notes on scraping reddit using the reddit API
+
+Pros of using reddit:
+- A lot of data to train a machine learning model
+- Learning how to scrape
+- Learning how to label the data
+
+
+
+*Register for App Key
+
+personal use script
+ID:
+CvrZkjqDeHA3FE2KxwolRg
+
+Secret
+frqHLztQkUckKRaKmyH0atSe-5Fsbw
+
+
+
+
+Install PRAW
