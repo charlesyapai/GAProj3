@@ -29,10 +29,13 @@ st.set_page_config(page_title='Subreddit Prediction', page_icon='🔮')
 st.title('🔮Subreddit Prediction🔮')
 st.write('This machine learning model is built with Naive Bayes Bernoulli model and will predict whether the post comes from r/bipolar or r/schizophrenia')
 
-#loading model
-with open("Model.pkl", "rb") as file:
+model_path = os.path.join(dir_path, 'Model.pkl')
+vectorizer_path = os.path.join(dir_path, 'vectorizer.pkl')
+
+with open(model_path, 'rb') as file:
     loaded_model = pickle.load(file)
-with open("vectorizer.pkl", "rb") as file:
+
+with open(vectorizer_path, 'rb') as file:
     loaded_vectorizer = pickle.load(file)
 
 #Creating functions
