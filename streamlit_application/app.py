@@ -29,11 +29,6 @@ st.set_page_config(page_title='Subreddit Prediction', page_icon='🔮')
 st.title('🔮Subreddit Prediction🔮')
 st.write('This machine learning model is built with Naive Bayes Bernoulli model and will predict whether the post comes from r/bipolar or r/schizophrenia')
 
-# Open the file for reading
-with open('irrelevant_words.txt', 'r') as f:
-    # Read the file and convert the JSON string back to a list
-    irrelevant_words = json.loads(f.read())
-
 #loading model
 with open("Model.pkl", "rb") as file:
     loaded_model = pickle.load(file)
