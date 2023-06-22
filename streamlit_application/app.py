@@ -10,9 +10,19 @@ from sklearn.naive_bayes import BernoulliNB
 from streamlit_chat import message
 import pickle
 import json
+import os
 nltk.download('punkt')
 nltk.download('stopwords')
 nltk.download('wordnet')
+
+# Get the directory of the current file
+dir_path = os.path.dirname(os.path.realpath(__file__))
+
+# Join the directory path and the file name
+file_path = os.path.join(dir_path, 'irrelevant_words.txt')
+
+with open(file_path, 'r') as f:
+    irrelevant_words = json.loads(f.read())
 
 #Configurations
 st.set_page_config(page_title='Subreddit Prediction', page_icon='🔮')
